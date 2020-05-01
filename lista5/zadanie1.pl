@@ -1,6 +1,6 @@
-bia≥y(' ' ).
-bia≥y('\t').
-bia≥y('\n').
+Ôªøbia≈Çy(' ' ).
+bia≈Çy('\t').
+bia≈Çy('\n').
 znak('+').
 znak('-').
 znak('<').
@@ -24,7 +24,7 @@ czytaj(S,X) :-
 czytaj_dalej(_,end_of_file,[]) :-
     !.
 czytaj_dalej(S,C1,X) :-
-    bia≥y(C1),
+    bia≈Çy(C1),
     !,
     get_char(S,C2),
     czytaj_dalej(S,C2,X).
@@ -32,27 +32,27 @@ czytaj_dalej(S,C1,TT) :-
     znak(C1),
     !,
     czytaj_znak(S,C1,C2, '',H),
-    zmieÒ_s≥owo(H,HHH),
+    zmie≈Ñ_s≈Çowo(H,HHH),
     czytaj_dalej(S,C2,T),
     append([HHH],T,TT).
 czytaj_dalej(S,C1,TT) :-
-    czytaj_s≥owo(S,C1,C2, '',H),
-    zmieÒ_s≥owo(H,HHH),
+    czytaj_s≈Çowo(S,C1,C2, '',H),
+    zmie≈Ñ_s≈Çowo(H,HHH),
     czytaj_dalej(S,C2,T),
     append([HHH],T,TT).
 
-czytaj_s≥owo(_,end_of_file,end_of_file,N,N) :-
+czytaj_s≈Çowo(_,end_of_file,end_of_file,N,N) :-
     !.
-czytaj_s≥owo(_,C,C,N,N) :-
-    bia≥y(C),
+czytaj_s≈Çowo(_,C,C,N,N) :-
+    bia≈Çy(C),
     !.
-czytaj_s≥owo(_,C,C,N,N) :-
+czytaj_s≈Çowo(_,C,C,N,N) :-
     znak(C),
     !.
-czytaj_s≥owo(S,C1,C3,N1,N) :-
+czytaj_s≈Çowo(S,C1,C3,N1,N) :-
     atom_concat(N1,C1,N2),
     get_char(S,C2),
-    czytaj_s≥owo(S,C2,C3,N2,N).
+    czytaj_s≈Çowo(S,C2,C3,N2,N).
 
 czytaj_znak(_,end_of_file,end_of_file,N,N) :-
     !.
@@ -65,40 +65,40 @@ czytaj_znak(S,C1,C3,N1,N) :-
     czytaj_znak(S,C2,C3,N2,N).
 
 
-zmieÒ_s≥owo('read',key(read)) :- !.
-zmieÒ_s≥owo('write',key(write)) :- !.
-zmieÒ_s≥owo('if',key(if)) :- !.
-zmieÒ_s≥owo('then',key(then)) :- !.
-zmieÒ_s≥owo('else',key(else)) :- !.
-zmieÒ_s≥owo('fi',key(fi)) :- !.
-zmieÒ_s≥owo('while',key(while)) :- !.
-zmieÒ_s≥owo('do',key(do)) :- !.
-zmieÒ_s≥owo('od',key(od)) :- !.
-zmieÒ_s≥owo('and',key(and)) :- !.
-zmieÒ_s≥owo('or',key(or)) :- !.
-zmieÒ_s≥owo('mod',key(mod)) :- !.
+zmie≈Ñ_s≈Çowo('read',key(read)) :- !.
+zmie≈Ñ_s≈Çowo('write',key(write)) :- !.
+zmie≈Ñ_s≈Çowo('if',key(if)) :- !.
+zmie≈Ñ_s≈Çowo('then',key(then)) :- !.
+zmie≈Ñ_s≈Çowo('else',key(else)) :- !.
+zmie≈Ñ_s≈Çowo('fi',key(fi)) :- !.
+zmie≈Ñ_s≈Çowo('while',key(while)) :- !.
+zmie≈Ñ_s≈Çowo('do',key(do)) :- !.
+zmie≈Ñ_s≈Çowo('od',key(od)) :- !.
+zmie≈Ñ_s≈Çowo('and',key(and)) :- !.
+zmie≈Ñ_s≈Çowo('or',key(or)) :- !.
+zmie≈Ñ_s≈Çowo('mod',key(mod)) :- !.
 
-zmieÒ_s≥owo(;,sep(;)) :- !.
-zmieÒ_s≥owo(+,sep(+)) :- !.
-zmieÒ_s≥owo(-,sep(-)) :- !.
-zmieÒ_s≥owo(*,sep(*)) :- !.
-zmieÒ_s≥owo(/,sep(/)) :- !.
-zmieÒ_s≥owo('(','sep(()') :- !.
-zmieÒ_s≥owo(')','sep())') :- !.
-zmieÒ_s≥owo(=<,sep(=<)) :- !.
-zmieÒ_s≥owo(>=,sep(>=)) :- !.
-zmieÒ_s≥owo(<,sep(<)) :- !.
-zmieÒ_s≥owo(>,sep(>)) :- !.
-zmieÒ_s≥owo(:=,sep(:=)) :- !.
-zmieÒ_s≥owo(/=,sep(/=)) :- !.
-zmieÒ_s≥owo(=,sep(=)) :- !.
-zmieÒ_s≥owo(Upper,id(Upper)) :-
+zmie≈Ñ_s≈Çowo(;,sep(;)) :- !.
+zmie≈Ñ_s≈Çowo(+,sep(+)) :- !.
+zmie≈Ñ_s≈Çowo(-,sep(-)) :- !.
+zmie≈Ñ_s≈Çowo(*,sep(*)) :- !.
+zmie≈Ñ_s≈Çowo(/,sep(/)) :- !.
+zmie≈Ñ_s≈Çowo('(','sep(()') :- !.
+zmie≈Ñ_s≈Çowo(')','sep())') :- !.
+zmie≈Ñ_s≈Çowo(=<,sep(=<)) :- !.
+zmie≈Ñ_s≈Çowo(>=,sep(>=)) :- !.
+zmie≈Ñ_s≈Çowo(<,sep(<)) :- !.
+zmie≈Ñ_s≈Çowo(>,sep(>)) :- !.
+zmie≈Ñ_s≈Çowo(:=,sep(:=)) :- !.
+zmie≈Ñ_s≈Çowo(/=,sep(/=)) :- !.
+zmie≈Ñ_s≈Çowo(=,sep(=)) :- !.
+zmie≈Ñ_s≈Çowo(Upper,id(Upper)) :-
     upcase_atom(Upper,X),
     X == Upper,
     !.
    % get_string_code(1,Upper,First),code_type(First,upper),!
-zmieÒ_s≥owo(Number,int(X)) :- atom_number(Number,X),!.
+zmie≈Ñ_s≈Çowo(Number,int(X)) :- atom_number(Number,X),!.
 
-zmieÒ_s≥owo(H,H) :- write('Nielegalne s≥owo: '), write(H),nl.
+zmie≈Ñ_s≈Çowo(H,H) :- write('Nielegalne s≈Çowo: '), write(H),nl.
 
 
